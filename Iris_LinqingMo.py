@@ -6,7 +6,7 @@ iris_df = sns.load_dataset("iris")
 st.write("""
 # Iris Dataset Visualization
 The classic Iris dataset has four features: sepal length, sepal width, petal length, and petal width.
-    This app visualizes the dataset in an interactive 3D scatter plot.
+    This app visualizes the dataset in an interactive 3D scatter plot, in which the size of a dot represents the petal width of an Iris flower.
 """)
 fig = px.scatter_3d(iris_df, 
                     x='sepal_length', 
