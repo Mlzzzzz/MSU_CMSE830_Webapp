@@ -3,7 +3,8 @@ import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
 
-chemical_df = pd.read_csv(r'C:\Users\User\OneDrive - Michigan State University\Data Science\cmse830\CMSE830Datasets\similarity+prediction-1\dataset_Similarity_Prediction\new_dataset\new_dataset.csv')
+data_url = "https://github.com/Mlzzzzz/MSU_CMSE830_Webapp/new_dataset.csv"
+chemical_df = pd.read_csv(data_url)
 
 col1, col2, col3 = st.columns([1, 1, 1])
 
