@@ -3,7 +3,7 @@ import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
 
-data_url = "https://github.com/Mlzzzzz/MSU_CMSE830_Webapp/new_dataset.csv"
+data_url = "https://raw.githubusercontent.com/Mlzzzzz/MSU_CMSE830_Webapp/main/new_dataset.csv"
 chemical_df = pd.read_csv(data_url)
 
 col1, col2, col3 = st.columns([1, 1, 1])
