@@ -1,2 +1,7 @@
-This Iris Web App is deploying on:
-https://msucmse830webapp-l2y4otyqveg9h7mdjyq4jr.streamlit.app/
+This is the midterm project for MSU CMSE830 Foundation of Data Science.
+
+This web app provides a detailed exploration and interactive visualization of the Molecular Similarity Perception dataset.
+
+This project is organized by pages, with both interactive streamlit functions and interactive visualization library like Altair and Facets-Dive. 
+
+The original dataset is collected and built based on: Gandini, E.; Marcou, G.; Bonachera, F.; Varnek, A.; Pieraccini, S.; Sironi, M. Molecular Similarity Perception Based on Machine-Learning Models. Int. J. Mol. Sci. 2022, 23, 6114.
