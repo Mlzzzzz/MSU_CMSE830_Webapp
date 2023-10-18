@@ -11,11 +11,8 @@
 <body>
     <facets-overview id="elem"></facets-overview>
     <script>
-        var data = JSON.parse(document.getElementById('data').textContent);
+        var data = YOUR_JSON_DATA; 
         document.querySelector("#elem").protoInput = JSON.stringify(data);
-    </script>
-    <script type="application/json" id="data">
-        YOUR_JSON_DATA
     </script>
 </body>
 </html>
