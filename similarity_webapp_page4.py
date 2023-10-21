@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import similarity_webapp_molecule_viewer
+from similarity_webapp_page2 import show_annotation
 
 def page4():
     st.markdown("<h1 style='text-align: center; color: black; font-size: 24px;'>Analysis of Misclassified Data</h1>", unsafe_allow_html=True)
@@ -10,6 +11,11 @@ def page4():
     st.markdown(r"""
                 $$
                 \hat{p} = \frac{e^{w_0 + w_1 t_{xt} + w_2 t_{cs}}}{1 + e^{w_0 + w_1 t_{xt} + w_2 t_{cs}}}
+                $$
+                """, unsafe_allow_html=True)
+    st.markdown(r"""
+                $$
+                w_0 = -5.605, w_1 = 5.214, w_2 = 2.009
                 $$
                 """, unsafe_allow_html=True)
     st.markdown("<h1 style='color: black; font-size: 18px;'>The LogReg model(Tanimoto CDK Extended, t<sub>xt</sub>)(TanimotoCombo, t<sub>cs</sub>) was built using scikit-learn using L1 regularization with the default value for the regularization parameter (𝜆=1).</h1>", unsafe_allow_html=True)
@@ -28,6 +34,10 @@ def page4():
     """.format(jsonstr=jsonstr)
     
     st.components.v1.html(HTML_TEMPLATE, width=1000, height=650)
+    annotation1 = 'All misclassified molecule pairs are from "sim2D, dis3D" or "dis2D, sim3D" groups and most them are recognized "dissimilar" by chemists but predicted as "similar" with the model.'
+    show_annotation(annotation1,1)
+    st.write("")
+    st.write("")
 
     id_pair = st.selectbox('Select a molecule pair to get the 2D pictures:', [''] + df["id_pair"].tolist())
     if id_pair:

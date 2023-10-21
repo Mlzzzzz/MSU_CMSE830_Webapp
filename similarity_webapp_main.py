@@ -16,11 +16,15 @@ else:
         "Introduction of the Dataset": page1,
         "Distribution of Attributes": page2,
         "Relationship of Attributes": page3,
-        "Analysis of Misclassified Data": page4
+        "Analysis of Misclassified Data": page4,
+        "Back to the Introduction Page": start_page
     }
 
     st.sidebar.title("Navigation")
     selection = st.sidebar.selectbox("Go to", list(pages.keys()))
+
+    if selection == "Back to the Introduction Page":
+        st.session_state.navigate = False
 
     # Call the function to draw the selected page.
     pages[selection]()
